@@ -163,6 +163,7 @@ class BaseExcelModel(FileModel):
         # recalculation was suspended.
         self.xl.Calculate()
         self.xl.Visible = True
+
         # get results
         results = {}
         for outcome in self.outcomes:
