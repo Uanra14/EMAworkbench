@@ -162,7 +162,7 @@ class BaseExcelModel(FileModel):
         # trigger a calculate event, in the case that the workbook's automatic
         # recalculation was suspended.
         self.xl.Calculate()
-
+        self.xl.Visible = True
         # get results
         results = {}
         for outcome in self.outcomes:
